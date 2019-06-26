@@ -139,7 +139,10 @@ for a more complete account of other common surprises.
 As that says near the end, "there are no easy answers."  Still, don't be unduly
 wary of floating-point!  The errors in Python float operations are inherited
 from the floating-point hardware, and on most machines are on the order of no
-more than 1 part in 2\*\*53 per operation.  That's more than adequate for most
+more than 1 part in 2\*\*53 per operation when doing multiplication and
+division. As discussed in the article referenced above, addition and
+subtraction can introduce much greater errors under some circumstances.
+It's typically more than adequate for most
 tasks, but you do need to keep in mind that it's not decimal arithmetic and
 that every float operation can suffer a new rounding error.
 
